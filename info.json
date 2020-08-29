@@ -1,6 +1,14 @@
 {
-    "NAME": "REDplugins",
-    "AUTHOR" : "MON5TERMATT",
-    "SHORT": "Plugins made for Redbot V3.",
-    "DESCRIPTION" : "Yeetus Deletus"
+  "author": ["MON5TERMATT"]
+  "install_msg": "Thanks for the add!\n\nUse `[p]cog list Snap` to view cogs.",
+  "name": "Matts Cogs",
+  "short": "Simple Purge System Plus Extras",
+  "description": "Was originally made for just one cog, however its now expanded to incluse sinbads old cogs that Iused daily"
+  "tags": [
+    "utility",
+    "information",
+    "images",
+    "moderation",
+    "various"
+  ]
 }
