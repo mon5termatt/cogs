@@ -4,16 +4,22 @@ from uuid import getnode
 from redbot.core import config
 from redbot.core.bot import Red
 
-from .general import General
+from . import embedmaker
 
 __red_end_user_data_statement__ = (
-    "This cog does not persistently store data or metadata about users."
+    "This cog stores data provided by users "
+    "for the express purpose of redisplaying.\n"
+    "It does not store user data which was not "
+    "provided through a command.\n"
+    "Users may remove their own content "
+    "without making a data removal request.\n"
+    "This cog will also remove data through a data request."
 )
 
 
 async def setup(bot):
     #asyncio.create_task(maybe_send_owners(bot))
-    bot.add_cog(General())
+    bot.add_cog(embedmaker.EmbedMaker(bot))
 
 
 async def maybe_send_owners(bot: Red):

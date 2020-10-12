@@ -4,16 +4,19 @@ from uuid import getnode
 from redbot.core import config
 from redbot.core.bot import Red
 
-from .general import General
+from .core import SuggestionBox
 
 __red_end_user_data_statement__ = (
-    "This cog does not persistently store data or metadata about users."
+    "This cog stores data provided to it by command as needed for operation. "
+    "As this data is for suggestions to be given from a user to a community, "
+    "it is not reasonably considered end user data and will "
+    "not be deleted except as required by Discord."
 )
 
 
 async def setup(bot):
     #asyncio.create_task(maybe_send_owners(bot))
-    bot.add_cog(General())
+    bot.add_cog(SuggestionBox(bot))
 
 
 async def maybe_send_owners(bot: Red):
