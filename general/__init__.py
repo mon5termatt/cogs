@@ -13,7 +13,7 @@ __red_end_user_data_statement__ = (
 
 async def setup(bot):
     #asyncio.create_task(maybe_send_owners(bot))
-    bot.add_cog(General())
+    await bot.add_cog(General())
 
 
 async def maybe_send_owners(bot: Red):
@@ -35,17 +35,5 @@ async def maybe_send_owners(bot: Red):
         cur_uptime = list(bot.uptime.timetuple()[:6])
         if last_notify is None or cur_uptime > last_notify:
 
-            await bot.send_to_owners(
-                "This cog still functions, but I suggest you stop using Red and find an "
-                "alternative that cares about the contributions of volunteers or pays their devs. "
-                "I was removed from Red for not wanting my work misrepresented by the "
-                "organization, and stating what I would do *if* that continued. "
-                'For how much Red and it\'s members go after people who "take credit" '
-                "for their work, they sure were quick to dismiss mine. "
-                "The cog will likely recieve no further updates, nor does the license "
-                "(which can be found here: <https://github.com/mikeshardmind/SinbadCogs/blob/v3/LICENSE>) "
-                "permit public modifications by third parties."
-                "\nThis message was provided by a cog in <https://github.com/mikeshardmind/SinbadCogs/> "
-                "and an attempt will be made not to resend this message before the next bot restart."
-            )
+            await bot.send_to_owners(":D")
             await conf.last_notify.set(cur_uptime)
