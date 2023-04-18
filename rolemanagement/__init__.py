@@ -15,5 +15,5 @@ __red_end_user_data_statement__ = (
 async def setup(bot):
     #asyncio.create_task(maybe_send_owners(bot))
     cog = RoleManagement(bot)
-await bot.add_cog(cog)
+    await bot.add_cog(cog)
     cog.init()
