@@ -4,4 +4,4 @@ from .stafftools import Stafftools
 
 def setup(bot: Red):
     tools = Stafftools(bot)
-    bot.add_cog(tools)
+    await bot.add_cog(tools)
