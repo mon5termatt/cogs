@@ -494,8 +494,6 @@ class InfoChannel(Cog):
                 await channel.edit(reason="InfoChannel update", name=formatted_name)
             except (discord.Forbidden, discord.HTTPException):
                 pass  # Don't bother figuring it out
-            except discord.InvalidArgument:
-                log.exception(f"Invalid formatted infochannel: {formatted_name}")
             else:
                 await asyncio.sleep(RATE_LIMIT_DELAY)  # Wait a reasonable amount of time
 
