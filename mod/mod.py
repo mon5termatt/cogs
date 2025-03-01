@@ -655,7 +655,7 @@ class Mod(ModClass):
             if toggle:
                 with contextlib.suppress(discord.HTTPException):
                     em = discord.Embed(
-                        title=bold(("You have been banned from {guild}.").format(guild=guild)),
+                        title=bold(("You have been banned from {guild}. You can appeal at https://url.medicatusb.com/unban").format(guild=guild)),
                         color=await self.bot.get_embed_color(user),
                     )
                     em.add_field(
